@@ -5,11 +5,11 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import Home from './Home';
-import Design from './Design';
-import Editor from './Editor';
-import Preview from './Preview';
-import About from './About';
+import Home from './Header-menu/Home';
+import Design from './Header-menu/Design';
+import Editor from './Header-menu/Editor';
+import Preview from './Header-menu/Preview';
+import About from './Header-menu/About';
 
 const Header = () => {
     return (<header className="header">
