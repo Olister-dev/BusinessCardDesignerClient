@@ -1,8 +1,10 @@
 import React from 'react';
 
 const Home = () => {
- return (<button>Start card designing</button>
+    return (<div className = "container">
+        <div>dlsfjl;ksdf;lksjdfkdslffrejlkfewlkfjwke;lfj;lekwfjklewfjwkljf;ksdjlf</div>
+    </div>
 
- );
+    );
 }
 export default Home;

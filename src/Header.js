@@ -1,29 +1,55 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import Home from './Home';
+import Design from './Design';
+import Editor from './Editor';
+import Preview from './Preview';
+import About from './About';
 
 const Header = () => {
-    return (<header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <div class="header__logo">
-                <a href="#"><span>JE</span>TRO</a>
-            </div>
-            <naw class="header__menu">
-                <div class="header__menu-btn">
-                    <div class="header__menu-row"></div>
-                    <div class="header__menu-row"></div>
-                    <div class="header__menu-row"></div>
+    return (<header className="header">
+        <div className="container">
+            <div className="header__inner">
+                <div className="header__logo">
+                    <a href="#"><span>JE</span>TRO</a>
                 </div>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">contact us</a></li>
-                </ul>
-            </naw>
+                <Router>
+                    <naw className="header__menu">
+
+                        <ul>
+                            <li><a><Link to="/">Home</Link></a></li>
+                            <li><a><Link to="/Design">Design</Link></a></li>
+                            <li><a><Link to="/Editor">Editor</Link></a></li>
+                            <li><a><Link to="/Preview">Preview</Link></a></li>
+                            <li><a><Link to="/About">About</Link></a></li>
+                        </ul>
+                    </naw>
+                    <Switch>
+                        <Route path="/About">
+                            <About />
+                        </Route>
+                        <Route path="/Preview">
+                            <Preview />
+                        </Route>
+                        <Route path="/Editor">
+                            <Editor />
+                        </Route>
+                        <Route path="/Design">
+                            <Design />
+                        </Route>
+                        <Route path="/">
+                            <Home />
+                        </Route>
+                    </Switch>
+                </Router>
+            </div>
         </div>
-    </div>
-  </header>  );
-  }
+    </header>);
+}
 
 export default Header;
