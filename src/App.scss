@@ -32,17 +32,18 @@ li{
    min-height: 80px;
 }
 
-.header__logo a{
+.header__logo 
+  a{
    font-family: 'Bebas Neue', cursive;
    font-size: 36px;
    color: #f3af9d;
    font-weight: 400;
    text-transform: uppercase;
+    & span{
+      color: #e8603c;
+    }
+  }
 
-}
-.header__logo a span{
-   color: #e8603c;
-}
 
 .header__menu li+li{
    margin-left: 28px;

@@ -5,14 +5,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Home from './Header-menu/Home';
-import Design from './Header-menu/Design';
-import Editor from './Header-menu/Editor';
-import Preview from './Header-menu/Preview';
-import About from './Header-menu/About';
-import './App.css';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
+import Home from './components/Home';
+import Design from './components/Design';
+import Editor from './components/Editor';
+import Preview from './components/Preview';
+import About from './components/About';
+import './App.scss';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
